@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-7DdJnvJJuhdnULExr1lGUlolB92R1Xc3tl1nEYA+6NA=' 'sha256-j+wtSUieFmdcbe3EDLoaJEb87tOTiu/GUmbIZHM2pgU='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://api.github.com https://raw.githubusercontent.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Dash</title>
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <script>
+      // theme before first paint: light by default, dark only when chosen (gbs.theme; the CSP allows this script by its hash)
+      try { if (localStorage.getItem("gbs.theme") === "dark") document.documentElement.classList.add("dark-mode"); } catch (_) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-C2Q5se91.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DBVXwxgz.css">
+  </head>
+  <body class="bg-secondary_subtle">
+    <div id="root"></div>
+    <script>
+      // A browser without DecompressionStream or WebCrypto (iOS / Safari < 16.4) cannot even parse the app's module, so
+      // its own "unsupported" screen never shows: this classic script runs on its own and says it (same words as
+      // ERROR_TEXT.unsupported in share/lib/session.ts; the CSP allows it by its hash). The app replaces it when it runs.
+      (function () {
+        try {
+          var c = window.crypto;
+          if (typeof window.DecompressionStream === "function" && c && c.subtle) return;
+          var root = document.getElementById("root");
+          if (!root) return;
+          var box = document.createElement("div");
+          box.id = "unsupported";
+          box.setAttribute("role", "alert");
+          box.style.cssText = "max-width:24rem;margin:15vh auto 0;padding:24px;font:16px/1.5 -apple-system,system-ui,sans-serif;color:#414651;background:#fff;border-radius:12px;text-align:center";
+          box.textContent =
+            "Tenhle prohlížeč neumí data rozbalit (chybí DecompressionStream nebo WebCrypto). Na iPhonu a iPadu je potřeba iOS 16.4 nebo novější, jinak stačí aktuální Chrome, Firefox, Safari nebo Edge.";
+          root.appendChild(box);
+        } catch (_) {}
+      })();
+    </script>
+  </body>
+</html>

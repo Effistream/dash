@@ -1,0 +1,7 @@
+{
+  "flavor": "share",
+  "source_sha256": "c1ee7bfe1d212ce7c5ad7bbf27ca2370824ee1f3395c0d30a5a09aaaf988bf2c",
+  "share_sha256": "9b7f64afd42c7a9b5a94c325b2f8a01780709abd347a49c82d271af3507a13a8",
+  "test_data": false,
+  "built_at": "2026-10-22T10:05:12.728Z"
+}
